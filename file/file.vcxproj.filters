@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="API">
+      <UniqueIdentifier>{016e6ff5-2c38-428b-b7cb-fa683c89e8ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\实现">
+      <UniqueIdentifier>{333be240-9987-4c13-902f-8dc372be86f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\工具头文件">
+      <UniqueIdentifier>{d2f5c443-5baa-4d20-a99e-022265ea31f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API\DCfile.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MD5.h">
+      <Filter>API\工具头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\file.cpp">
+      <Filter>API\实现</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MD5.cpp">
+      <Filter>API\实现</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
