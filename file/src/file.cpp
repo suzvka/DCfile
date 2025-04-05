@@ -123,6 +123,7 @@ namespace DC {
             }
             // 获取文件数据并计算 MD5
             md5Calculator.update(data->data(), data->size()); // 使用 MD5 类更新每一行的数据
+            md5Calculator.finalize();
             md5 = md5Calculator.hexdigest(); // 获取十六进制摘要
             std::transform(md5.begin(), md5.end(), md5.begin(), ::toupper); // 将 MD5 结果转为大写
             return md5;
@@ -216,6 +217,7 @@ namespace DC {
             if (data[i] == '\n') {
                 if (i > 0 && data[i - 1] == '\r') {
                     text.pop_back();  // 去除 '\r'，保留 '\n'
+                    text.push_back('\n');
                 }
             }
             else {
